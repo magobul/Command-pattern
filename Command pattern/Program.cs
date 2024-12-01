@@ -12,16 +12,16 @@ class Program
         ICommand insertWorld = new InsertTextCommand(editor, " World");
         editor.ExecuteCommand(insertWorld);
 
-        ICommand deleteCommand = new DeleteTextCommand(editor, 6); // Удаляем " World"
+        ICommand deleteCommand = new DeleteTextCommand(editor, 6); // Удаление " World"
         editor.ExecuteCommand(deleteCommand);
 
-        // Отмена последней операции (удаление)
+        // Отмена последней операции
         editor.Undo();
 
-        // Отмена последней операции (ввод текста " World")
+        // Отмена последней операции
         editor.Undo();
 
-        // Отмена последней операции (ввод текста "Hello")
+        // Отмена последней операци
         editor.Undo();
 
         // Попытка отмены без команд
